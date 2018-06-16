@@ -1,0 +1,3 @@
+git branch - sprawdzam na jakiej jestem ga³êzi
+git checkout -b (nazwa ga³ezi) - tworzy now¹ ga³¹Ÿ
+git checkout (nazwa ga³êzi) przenosi nas na ta ga³¹Ÿ
