@@ -1,6 +1,7 @@
 import React from 'react';
 import Movie from './Movie';
 // import data from '../data.json';
+import Header from './header';
 
 class Landing extends React.Component{
     
@@ -17,17 +18,18 @@ class Landing extends React.Component{
 
     render(){
     return(
-    <div className="search">
-        <header><h1>Video search</h1>
-        <input onChange={this.inputHandler} type="text" placeholder="Search" value={this.state.searchTerm} />
-        </header>
+        <div className="search">
+        <Header showSearch inputHandler={this.inputHandler} />
         <div>
-
         {this.props.shows.filter(item => `${item.title} ${item.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase())>= 0).map(el => <Movie {...el} key={el.imdbID} />)}
         </div>
     </div>
     )
   }
 }
+
+const mapStateToProps = state =>({
+    searchTeram: state.searchTerm
+})
 
 export default Landing;
