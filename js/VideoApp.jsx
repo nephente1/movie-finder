@@ -16,7 +16,7 @@ const App = () => (
     <div className="app">
     <Switch>
         <Route exact path="/" component={Homepage}/>
-        <Route path="/search" component={Landing}/>
+        <Route path="/search" component={(props) => <Landing shows={data.shows} {...props} />}/>
         <Route path="/details/:id" component={(props)=> <DetailedMovie show={data.shows.find(item => item.imdbID === props.match.params.id)} />}/>
         <Route component={FourOFour}/>
         </Switch>

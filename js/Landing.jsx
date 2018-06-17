@@ -1,13 +1,12 @@
 import React from 'react';
 import Movie from './Movie';
-import data from '../data.json';
+// import data from '../data.json';
 
 class Landing extends React.Component{
     
-    state = {  ///zapis dzieki pluginowi w babelrc
-        searchTerm: "game"
+    state = {  
+        searchTerm: ""
     }
-
 
     inputHandler = (event)=> {
         console.log(event.target.value);
@@ -15,7 +14,6 @@ class Landing extends React.Component{
             searchTerm: event.target.value
         });
     }
-
 
     render(){
     return(
@@ -25,7 +23,7 @@ class Landing extends React.Component{
         </header>
         <div>
 
-        {data.shows.filter(item => `${item.title} ${item.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase())>= 0).map(el => <Movie {...el} key={el.imdbID} />)}
+        {this.props.shows.filter(item => `${item.title} ${item.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase())>= 0).map(el => <Movie {...el} key={el.imdbID} />)}
         </div>
     </div>
     )
