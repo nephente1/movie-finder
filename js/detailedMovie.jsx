@@ -1,17 +1,21 @@
 import React from 'react';
 import {string } from 'prop-types';
 
-const DetailedMovie = (shows, props) => (
+const DetailedMovie = (props) => (
     <div className="details">
-        <pre><code>{JSON.stringify(shows,null,4)}</code></pre>
+    <header><h1>Video</h1></header>
+    <section>
+        <h1>{props.show.title}</h1>
+        <h2>({props.show.year})</h2>
+        <img src={`/public/img/posters/${props.show.poster}`} alt={`Poster for ${props.show.title}`}/>
+        <p>{props.show.description}</p>
+        
+    </section>
+    <div><iframe src={`https://www.youtube-nocookie.com/embed/${props.show.trailer}?rel=0&amp;controls=0&amp;showinfo=0`}>
+        </iframe>
+        </div>
     </div>
 );
 
-DetailedMovie.propType = {
-    poster:string.isRequired,
-    title:string.isRequired,
-    year:string.isRequired,
-    description:string.isRequired
-};
 
 export default DetailedMovie;

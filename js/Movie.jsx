@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 import {string} from 'prop-types';
 
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
     width:32%;
     border: 0.125rem solid #333;
     border-radius: 0.25rem;
@@ -17,7 +18,8 @@ const Image = styled.img`
 `
 
 const Movie = props => (
-    <Wrapper>
+    
+    <Wrapper to={`/details/${props.imdbID}`}>
         <Image src={`/public/img/posters/${props.poster}`} alt={`${props.title} Cover`}/>
         <div>
             <h3>{props.title}</h3>
@@ -28,11 +30,11 @@ const Movie = props => (
     
 );
 
-Movie.propType = {
-    poster:string.isRequired,
-    title:string.isRequired,
-    year:string.isRequired,
-    description:string.isRequired
+Movie.propTypes = {
+    poster: string.isRequired,
+    title: string.isRequired,
+    year: string.isRequired,
+    description: string.isRequired
 };
 
 export default Movie;
