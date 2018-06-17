@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {string} from 'prop-types';
 
 const Wrapper = styled.div`
     width:32%;
@@ -15,16 +16,23 @@ const Image = styled.img`
     margin-right:10px;
 `
 
-const Movie = (props) => (
+const Movie = props => (
     <Wrapper>
-        <Image src={`/public/img/posters/${props.show.poster}`} alt={`${props.show.title} Cover`}/>
+        <Image src={`/public/img/posters/${props.poster}`} alt={`${props.title} Cover`}/>
         <div>
-            <h3>{props.show.title}</h3>
-            <h4>{props.show.year}</h4>
-            <p>{props.show.description}</p>
+            <h3>{props.title}</h3>
+            <h4>{props.year}</h4>
+            <p>{props.description}</p>
         </div>
     </Wrapper>
     
 );
+
+Movie.propType = {
+    poster:string.isRequired,
+    title:string.isRequired,
+    year:string.isRequired,
+    description:string.isRequired
+};
 
 export default Movie;

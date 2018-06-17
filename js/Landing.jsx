@@ -1,5 +1,5 @@
 import React from 'react';
-import Movie from './Movie.jsx';
+import Movie from './Movie';
 import data from '../data.json';
 
 class Landing extends React.Component{
@@ -8,9 +8,6 @@ class Landing extends React.Component{
         searchTerm: "game"
     }
 
-    // constructor(state){
-    //     this.state = state;
-    // }
 
     inputHandler = (event)=> {
         console.log(event.target.value);
@@ -28,7 +25,7 @@ class Landing extends React.Component{
         </header>
         <div>
 
-        {data.shows.filter(item => `${item.title} ${item.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase())>= 0).map(el => <Movie show={el} key={el.imdbID} />)}
+        {data.shows.filter(item => `${item.title} ${item.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase())>= 0).map(el => <Movie {...el} key={el.imdbID} />)}
         </div>
     </div>
     )
