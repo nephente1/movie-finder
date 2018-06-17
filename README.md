@@ -1,13 +1,11 @@
 # Movie finder
 ## This will be instruction for this project
 
-
-```bash
+```bash / cmd
 yarn dev
-
+yarn watch
 
 ```
-
 
 ---
 
@@ -18,8 +16,6 @@ yarn dev
 	import React from './react'; // for handle React objects
 	import { react-dom } from './react-dom' // for DOM utilizations
 
-
-
 ```
 
 ## branch starter
@@ -27,7 +23,6 @@ yarn dev
 **Most important:**
 1. React is the pure java script library
 2. We can use vanilla js inside the code at all times
-3. React dont need any other tools for working
 
 ## automation development
 1. Babel // jsx files
