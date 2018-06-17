@@ -1,22 +1,5 @@
 # Movie finder
-## This will be instruction for this project
-
-```bash / cmd
-yarn dev
-yarn watch
-
-```
-
----
-
-## JS instruction
-
-```javascript
-
-	import React from './react'; // for handle React objects
-	import { react-dom } from './react-dom' // for DOM utilizations
-
-```
+This is React.js Application that shows a movies library. We can search a movie, then choose it and see it details and trailer.
 
 ## branch starter
 **starter** - this branch is for understand what happen in vanilla react.
@@ -30,9 +13,15 @@ yarn watch
 3. EsLint // Airbnb guidelines for js
 4. Pretier
 
-NPM = node package manager
-https://yarnpkg.com/lang/en/docs/install/#windows-stable
-Yarn = npm install yarn -g //zamiennik do NPM
-yarn init = create json file
-yarn
-webpack.config.js
+1. NPM = node package manager || Yarn = npm install yarn -g //instead NPM
+2. yarn init = create json file
+3. type: yarn //instal dependecies
+4. configure file - webpack.config.js
+
+#start project locally
+```
+bash / cmd
+yarn dev
+yarn watch
+```
+
