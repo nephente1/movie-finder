@@ -6,17 +6,17 @@ class Header extends React.Component{
 
     render(){
 
-    let smth;
+    let inputAppear;
     if(this.props.showSearch){
-        smth = <input onChange={this.props.inputHandler} type="text" placeholder="Search" value={this.props.searchTerm} />
+        inputAppear = <input onChange={this.props.inputHandler} type="text" placeholder="Search" value={this.props.searchTerm} />
     } else{
-        smth = <h2><Link to="/search">Back</Link></h2>
+        inputAppear = <h2><Link to="/search">Back</Link></h2>
     }
 
         return(
              <header>
                  <h1><Link to="/">Video search</Link></h1>
-             {smth}
+             {inputAppear}
             </header>
         
         )

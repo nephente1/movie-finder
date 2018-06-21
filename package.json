@@ -6,7 +6,7 @@
   "repository": "https://github.com/nephente1/movie-finder.git",
   "author": "nephente1 <nephente@interia.pl>",
   "license": "Beerware",
-  "scripts" :{
+  "scripts": {
     "dev": "webpack-dev-server",
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
@@ -14,10 +14,11 @@
     "api": "node ratingsAPI.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "test:watch": "jest --watch"
   },
-  "jest":{
-    "snapshotSerializers":[
+  "jest": {
+    "snapshotSerializers": [
       "jest-serializer-enzyme"
     ]
   },
@@ -46,6 +47,7 @@
     "webpack-hot-middleware": "2.18.0"
   },
   "devDependencies": {
+    "react-testing-library": "^3.1.7",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-loader": "7.0.0",
@@ -77,5 +79,4 @@
     "react-test-renderer": "15.5.4",
     "webpack-dev-server": "2.4.5"
   }
-
 }
